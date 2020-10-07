@@ -9,7 +9,7 @@
 User.destroy_all 
 Pitch.destroy_all 
 
-User.create(username: "admin")
+User.create(username: "admin", password_digest: BCrypt::Password.create('hello'))
 
 Pitch.create(
     name: "Birmingham School Football Pitch",
